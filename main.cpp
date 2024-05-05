@@ -2,7 +2,7 @@
 #include <fstream>
 #include <string>
 #include <filesystem>
-// #include <directed.h>
+#include <directed.h>
 using namespace std;
 
 class file
@@ -94,16 +94,17 @@ public:
          cout<<"Your File "<<File_name<<" Is Removed/Deleted Successfully"<<endl;
          cout<<endl;
     }
-    // void direc_cret(string File_name)
-    // {
-    //     if(_mkdir(File_name.c_str());){
 
-    //         cout<<"Your Directory "<<File_name<<" Is Created Successfully"<<endl;
-    //     }
-    //     else{
-    //         cout<<"Your Directory "<<File_name<<" Is NOT Created Successfully"<<endl;
-    //     }
-    // }
+    void direc_cret(string File_name)
+    {
+        if(_mkdir(File_name.c_str());){
+
+            cout<<"Your Directory "<<File_name<<" Is Created Successfully"<<endl;
+        }
+        else{
+            cout<<"Your Directory "<<File_name<<" Is NOT Created Successfully"<<endl;
+        }
+    }
 
 };
 int main()
@@ -191,14 +192,14 @@ int main()
             f1.remove(file);
             break;
         }
-        //  case 7:{
-        //     int folder;
-        //     cout<<"Enter Your Directory Name : ";
-        //     cin>>folder;
-        // cout<<endl;
-        //     f1.remove(folder);
-        // break;
-        // }
+         case 7:{
+            int folder;
+            cout<<"Enter Your Directory Name : ";
+            cin>>folder;
+        cout<<endl;
+            f1.remove(folder);
+        break;
+        }
          case 8:{
            cout << "Exiting the program." << endl;
            return 0;
